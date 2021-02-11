@@ -1,3 +1,6 @@
+//GET - AFFICHE LA LISTE DE LIVRES
 exports.getArticlesPage = (req,res)=>{
-    res.send('liste-des-articles')
+    res.render('articles')
 }
+
+
