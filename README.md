@@ -1,3 +1,8 @@
 # Projet-Exo-MySQL
  Procedure : 
- 1. Installer la base de donnée avec SQL
+ 1. INSTALLER LA BASE DE DONNEE AVEC SQL
+ 2. CREER UN FICHIER .ENV ET METTEZ A JOUR VOS DONNEES DE CONNEXIONS 
+    DB_HOST=localhost
+    DB_USER=root
+    DB_PASS=
+    DB_NAME=
