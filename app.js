@@ -25,6 +25,10 @@ db.connect(
 //DECLARE LA VARIABLE GLOBALE ( partage la connection à tous les fichiers )
 global.querysql = util.promisify(db.query).bind(db)
 
+//MIDDLEWARE - BODYPARSER
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
+
 // EJS
 app.set('view engine','ejs')
 

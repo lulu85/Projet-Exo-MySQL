@@ -1,8 +1,10 @@
 const router = require('express').Router()
-const articleController = require('../controllers/articlesController')
+const articlesController = require('../controllers/articlesController')
 
 //PAGE DES ARTICLES
 //GET
-router.get('/', articleController.getArticlesPage)
+router.get('/', articlesController.getArticlesPage)
+
+router.get('/:id', articlesController.getSingleArticlePage )
 
 module.exports = router
