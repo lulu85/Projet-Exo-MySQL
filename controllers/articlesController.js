@@ -1,7 +1,7 @@
-//GET - AFFICHE LA LISTE DE LIVRES
+//GET - AFFICHE LA LISTE DES ARTICLES
 exports.getArticlesPage = async (req,res)=>{
     const listeDesArticles = await querysql('SELECT * FROM article;')
-    //console.log('articles :',listeDesArticles[0].titre);
+    //console.log('articles :',listeDesArticles[0].image);
     res.render('articles',{articles: listeDesArticles})
 }
 

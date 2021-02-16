@@ -37,12 +37,17 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 //ROUTES
 const articles = require('./routes/articlesRoute')
+const auteurs = require('./routes/auteursRoute')
+const admin = require('./routes/adminRoute')
 
 //CONTROLLER 
 app.use('/liste-des-articles', articles)
+app.use('/liste-des-auteurs', auteurs)
+app.use('/admin', admin)
 
 app.get('/',(req,res)=>{
     res.send('yo')
 })
 
-app.listen(3000, console.log('vous êtes connectez au port 3000'))
+const port = 3000
+app.listen(port, console.log(`vous êtes connectez au port ${port}` ))
