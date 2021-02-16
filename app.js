@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 //ROUTES
 const articles = require('./routes/articlesRoute')
 const auteurs = require('./routes/auteursRoute')
-const admin = require('./routes/adminRoute')
+const admin = require('./routes/admin/adminRoute')
 
 //CONTROLLER 
 app.use('/liste-des-articles', articles)
