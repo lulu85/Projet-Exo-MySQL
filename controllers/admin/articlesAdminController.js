@@ -1,3 +1,4 @@
-exports.getArticlesAdmin = async (req,res)=>{
-    res.render('admin/articlesAdmin')
-}
+exports.getArticlesAdmin = async (req, res) => {
+    const ArticlesAdmin = await querysql('SELECT * FROM article')
+    res.render('admin/articlesAdmin',{artices: AriclesAdmin})
+} 

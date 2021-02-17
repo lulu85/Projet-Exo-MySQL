@@ -29,14 +29,17 @@
                     </thead>
                     
                     <tbody>
+                        <% articles.forEach(function(variableLocale) {%>
+                           
                         <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
+                            <td><%= variableLocale.titre %></td>
+                            <td><%= variableLocale.image %></td>
+                            <td><%= variableLocale.auteur %></td>
+                            <td><%= variableLocale.description %></td>
                             <td><button type="button" class="btn btn-primary">Modifier</button></td>
                             <td><button type="button" class="btn btn-danger">Supprimer</button></td>
                         </tr>
+                        <%});%>
                     </tbody>
                 </table>
             </div>
