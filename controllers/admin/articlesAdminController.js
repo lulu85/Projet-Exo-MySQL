@@ -7,12 +7,13 @@ exports.getArticlesAdmin = async (req, res) => {
 
 //AFFICHE LE FORMULAIRE D'UN ARTICLE
 exports.getAddArticleAdmin = async (req,res)=>{
-    res.render('admin/ajouterAdmin')
+    const listeDesAuteurs = await querysql('SELECT * FROM auteur')
+    res.render('admin/ajouterAdmin', {auteurs: listeDesAuteurs})
 
 }
 
 //AJOUTER UN ARTICLE
 exports.postAddArticleAdmin = async (req,res)=>{
-    //res.render('admin/articlesAdmin')
+    // res.render('admin/articlesAdmin')
 
 }
