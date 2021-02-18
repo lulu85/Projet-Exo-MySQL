@@ -3,3 +3,16 @@ exports.getArticlesAdmin = async (req, res) => {
     const articlesAdmin = await querysql('SELECT article.titre, article.image, article.description, auteur.nom FROM article INNER JOIN auteur ON article.articleId = auteur.auteurID')
     res.render('admin/articlesAdmin',{articles: articlesAdmin,total : articlesTotal[0].total})
 } 
+
+
+//AFFICHE LE FORMULAIRE D'UN ARTICLE
+exports.getAddArticleAdmin = async (req,res)=>{
+    res.render('admin/ajouterAdmin')
+
+}
+
+//AJOUTER UN ARTICLE
+exports.postAddArticleAdmin = async (req,res)=>{
+    //res.render('admin/articlesAdmin')
+
+}
