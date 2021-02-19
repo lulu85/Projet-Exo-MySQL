@@ -3,6 +3,7 @@ const app = express()
 const path = require('path')
 const mysql = require('mysql')
 const util = require('util')
+const methodOverride = require('method-override')
 
 //DotEnv
 require('dotenv').config()
@@ -21,6 +22,9 @@ db.connect(
         console.log('Connecté au serveur MySql');
     }    
 )
+
+//METHOD-OVERRIDE
+app.use(methodOverride('_method'));
 
 //DECLARE LA VARIABLE GLOBALE ( partage la connection à tous les fichiers )
 global.querysql = util.promisify(db.query).bind(db)
